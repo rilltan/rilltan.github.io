@@ -1,12 +1,14 @@
+let cnv;
 function setup() {
-  var cnv = createCanvas(600, 600);
+  cnv = createCanvas(600, 600);
   cnv.mousePressed(mousePressedOnCanvas)
   cnv.parent("map_sketch_holder")
   for (let element of document.getElementsByClassName("p5Canvas")) {
     element.addEventListener("contextmenu", (e) => e.preventDefault());
     element.addEventListener("wheel", (e) => e.preventDefault())
   }
-  cnv.mouseWheel(zoom)
+  cnv.mouseWheel(canvasZoom)
+  document.getElementById("map_centered_text").innerHTML = "this is a test"
 }
 
 var x = 0 // x value of the where the mouse clicked, stored as the grid location
@@ -181,7 +183,7 @@ function mouseReleased () { // function when mouse is released
   rightMousePressed = false
 }
 
-function zoom(event) {
+function canvasZoom(event) {
   let zoom = event.deltaY/100
   if (zoom==-1) {
     zoomAmount *= 1.2
