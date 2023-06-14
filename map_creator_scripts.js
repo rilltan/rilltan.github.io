@@ -8,7 +8,6 @@ function setup() {
     element.addEventListener("wheel", (e) => e.preventDefault())
   }
   cnv.mouseWheel(canvasZoom)
-  document.getElementById("map_centered_text").innerHTML = "this is a test"
 }
 
 var x = 0 // x value of the where the mouse clicked, stored as the grid location
@@ -185,12 +184,12 @@ function mouseReleased () { // function when mouse is released
 
 function canvasZoom(event) {
   let zoom = event.deltaY/100
-  if (zoom==-1) {
+  if (Math.round(zoom)==-1) {
     zoomAmount *= 1.2
     cam.x+=600/zoomAmount/10
     cam.y+=600/zoomAmount/10
   }
-  if (zoom==1) {
+  if (Math.round(zoom)==1) {
     cam.x-=600/zoomAmount/10
     cam.y-=600/zoomAmount/10
     zoomAmount /= 1.2
@@ -364,7 +363,7 @@ function draw() {
   
   if (selected != -1) { // highlighting the currently selected box
     noFill()
-    stroke("rgba(0,255,255,0.5)")
+    stroke("rgba(0,0,255,0.5)")
     strokeWeight(3)
     if (mode=="wall") {
       rect(boxes[currentRoom][selected].x-2-cam.x,boxes[currentRoom][selected].y-2-cam.y,boxes[currentRoom][selected].w+4,boxes[currentRoom][selected].h+4)
