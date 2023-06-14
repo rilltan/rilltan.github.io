@@ -364,7 +364,7 @@ function draw() {
   
   if (selected != -1) { // highlighting the currently selected box
     noFill()
-    stroke("rgba(0,0,255,0.5)")
+    stroke("rgba(0,255,255,0.5)")
     strokeWeight(3)
     if (mode=="wall") {
       rect(boxes[currentRoom][selected].x-2-cam.x,boxes[currentRoom][selected].y-2-cam.y,boxes[currentRoom][selected].w+4,boxes[currentRoom][selected].h+4)
