@@ -1,0 +1,197 @@
+body {
+    background-color: rgb(192, 234, 238);
+    color: black;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font-family: "Roboto Flex",sans-serif;
+}
+
+header {
+    background-color: rgb(255, 123, 0);
+    height: 4rem;
+    display: grid;
+    grid-template-columns: 0.1% 99.9%;
+    font-weight: bold;
+}
+
+#logo_container {
+    z-index:2;
+}
+#logo {
+    width: 4rem;
+    height: 4rem;
+    min-width: 4rem;
+}
+
+@media only screen and (max-width:1100px) {
+    header {
+        grid-template-columns: 100%;
+        grid-template-rows: 4rem 4rem;
+        height: 8rem;
+    }
+    #logo_container{
+        width:fit-content;
+        margin: auto;
+    }
+    
+}
+
+#flex_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 4rem;
+    z-index:1;
+    visibility: visible;
+}
+
+.navbar_buttons {
+    text-align: center;
+    line-height: 4rem;
+    width: 10rem;
+    height: 4rem;
+    background-color:rgb(255, 123, 0);
+    color: black;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: 0.5s;
+    box-shadow: inset 0 0 0 0.01px rgba(109, 75, 11, 0.486);
+}
+.navbar_buttons:hover {
+    cursor:pointer;
+    color: black;
+    box-shadow: inset 0 4rem 0 0.01px rgba(109, 75, 11, 0.486);
+}
+
+main {
+    font-size: 18px;
+    background-color: rgb(142, 228, 235);
+    display: block;
+    width: min(60rem,95%);
+    margin: auto;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+h1 {
+    text-align: center;
+}
+
+/* GRAVITY SIMULATOR */
+#grav_main {
+    text-align: center;
+}
+:root {
+    --xthumbcolor: grey;
+    --ythumbcolor: grey;
+}
+#grav_flex_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#grav_sketch_holder {
+    width: 600px;
+    margin: 20px
+}
+#grav_controls {
+    text-align: left;
+    margin: 1;
+}
+.grav_slider {
+    width: 4rem;
+}
+input[type="range"] {
+    -webkit-appearance:none;
+    height: 5px;
+    border-radius: 3px;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    background: grey;
+}
+#grav_velx::-webkit-slider-thumb {
+    background: var(--xthumbcolor)
+}
+#grav_vely::-webkit-slider-thumb {
+    background: var(--ythumbcolor)
+}
+
+/*DELTARUNE */
+#delta_sketch_holder {
+    margin:auto;
+    display: block;
+    width:700px;
+    height:700px;
+}
+
+/*MAP CREATOR */
+#map_centered_text {
+    text-align: center;
+}
+#map_flex_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#map_sketch_holder {
+    width: 600px;
+    margin: 10px;
+}
+#map_controls {
+    text-align: left;
+    margin: 10px;
+}
+#map_button_grid {
+    display: grid;
+    gap: 2px;
+    width: 60%;
+    grid-template-areas:
+        "x a y"
+        "b c d";
+    grid-template-columns: repeat(3,33%);
+    grid-template-rows: repeat(2,50%);
+}
+#map_button_grid :nth-child(1) {
+    grid-area: a;
+}
+#map_button_grid :nth-child(2) {
+    grid-area: b;
+}
+#map_button_grid :nth-child(3) {
+    grid-area: c;
+}
+#map_button_grid :nth-child(4) {
+    grid-area: d;
+}
+#map_output {
+    margin: 10px;
+}
+
+/*SIMPLE 3D */
+#threed_sketch_holder {
+    display: block;
+    width: 600px;
+    margin: auto;
+}
+
+/*BLENDER */
+#blender_image_grid {
+    display:grid;
+    gap:1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6,auto)
+}
+.blender_images {
+    max-width:100%;
+    height:auto;
+}
+.blender_videos {
+    width: 100%;
+    aspect-ratio: 16/9;
+}

@@ -1,0 +1,105 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>rilltan</title>
+
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href ="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap">
+
+    </head>
+
+
+    <body>
+        <header>
+            <div id="logo_container">
+                <a href="index.html"><img src="icon.png" id="logo" alt="Logo image"></a>
+            </div>
+
+            <div id="flex_container">
+                <a class="navbar_buttons" href="index.html">HOME</a>
+                <a class="navbar_buttons" href="gravity.html">GRAVITY</a>
+                <a class="navbar_buttons" href="deltarune.html">DELTARUNE</a>
+                <a class="navbar_buttons" href="map_creator.html">MAP CREATOR</a>
+                <a class="navbar_buttons" href="simple_3d.html">SIMPLE 3D</a>
+                <a class="navbar_buttons" href="blender.html">BLENDER</a>
+            </div>
+        </header>
+
+        <main>
+            <h1>Map Creator</h1>
+            This is a map creator for the Deltarune project. The code that it generates can be placed into the files of that program to run it.
+            <br><br>Controls:
+            <ul>
+                <li>Left mouse: drag to create an exit or wall, depending on the current mode</li>
+                <li>Left mouse: click to select an exit or wall, depending on the current mode</li>
+                <li>Right mouse: drag to move the camera</li>
+                <li>Scroll wheel: zoom</li>
+                <li>Options: modify the currently selected object</li>
+            </ul>
+
+            <div id="map_centered_text">
+                <div id="roomText">Current Room: 0</div>
+                <div id="size-display">X: 700&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Y: 700</div>
+                <input type="range" min="0" max="80" value="0" id="sizex" class="slider" oninput="changeSize()">
+                <input type="range" min="0" max="80" value="0" id="sizey" class="slider" oninput="changeSize()">
+
+                <div id="map_flex_container">
+                    <div id="map_sketch_holder"></div>
+                    <div id="map_controls">
+                    <label>Currently editing:</label>
+                    <select id="mode" onclick="changeMode()">
+                        <option value="wall">Walls</option>
+                        <option value="exit">Exits</option>
+                    </select>
+
+                    <p id="details">
+                        X: N/A <br>
+                        Y: N/A <br>
+                        Width: N/A <br>
+                        Height: N/A <br>
+                    </p>
+
+                    <button class="wallStuff exitStuff" onclick="deleteSelected()" disabled>delete selected</button>
+                    <br><br>
+
+                    <div id="map_button_grid">
+                        <button class="wallStuff exitStuff" onclick="moveBox('y',-1)" disabled>↑</button>
+                        <button class="wallStuff exitStuff" onclick="moveBox('x',-1)" disabled>←</button>
+                        <button class="wallStuff exitStuff" onclick="moveBox('y',1)" disabled>↓</button>
+                        <button class="wallStuff exitStuff" onclick="moveBox('x',1)" disabled>→</button>
+                    </div>
+                    <br>
+
+                    Text: <br><textarea class="wallStuff inputs" id="textInput" oninput="addText()" disabled></textarea>
+                    <br><br>
+                    Destination: <input class="exitStuff inputs" id="dest" oninput="changeDest()" size="2" disabled>
+                    <br>
+                    Destination X: <input class="exitStuff inputs" id="destx" oninput="changeDest()" size="4" disabled>
+                    <br>
+                    Destination Y: <input class="exitStuff inputs" id="desty" oninput="changeDest()" size="4" disabled>
+                    </div>
+                </div>
+
+                <button onclick = "output()">generate</button>
+                <button onclick = "clearMap()">clear all</button>
+                <button onclick = "clearRoom()">clear room</button>
+                <br>
+
+                <button onclick = "changeRoom(-1)">room -1</button>
+                <button onclick = "changeRoom(1)">room +1</button>
+                <br>
+
+                <textarea id="map_output" rows="15" cols="70" readonly onclick="selectText()"></textarea>
+            </div>
+        </main>
+
+        <!-- Load external JavaScript -->
+        <script src="map_creator_scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+    </body>
+
+</html>

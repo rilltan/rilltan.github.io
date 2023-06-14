@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>rilltan</title>
+
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href ="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap">
+
+    </head>
+
+
+    <body>
+        <header>
+            <div id="logo_container">
+                <a href="index.html"><img src="icon.png" id="logo" alt="Logo image"></a>
+            </div>
+
+            <div id="flex_container">
+                <a class="navbar_buttons" href="index.html">HOME</a>
+                <a class="navbar_buttons" href="gravity.html">GRAVITY</a>
+                <a class="navbar_buttons" href="deltarune.html">DELTARUNE</a>
+                <a class="navbar_buttons" href="map_creator.html">MAP CREATOR</a>
+                <a class="navbar_buttons" href="simple_3d.html">SIMPLE 3D</a>
+                <a class="navbar_buttons" href="blender.html">BLENDER</a>
+            </div>
+        </header>
+
+        <main id="grav_main">
+            <h1>Gravity Simulator</h1>
+            Choose the properties you want a gravitational body to have using the options, then click on the canvas to create a body with those properties. Once you have added all the bodies you want, click the start button to begin the simulation.
+            <br><br>
+            The velocity sliders start in the center with 0 velocity. The slider pointer will turn green to indicate that a body has a starting velocity, and will turn grey if there is no velocity.
+            <br>Ticking the "lines" checkbox enables trails behind each body, which will be the same colour as the body.
+            <div id="grav_flex_container">
+        
+                <div id="grav_sketch_holder"></div>
+                <div id="grav_controls">
+                  Mass:
+                  <input type="range" min="1" max="10" value="1" id="grav_mass" class="grav_slider">
+                  <br>
+                  X velocity:
+                  <input type="range" min="-3" max="3" value="0" step="0.5" id="grav_velx" class="grav_slider" onchange="updateSlider('velx')">
+                  <br>
+                  Y velocity:
+                  <input type="range" min="-3" max="3" value="0" step="0.5" id="grav_vely" class="grav_slider" onclick="updateSlider('vely')">
+                  <br>
+                  Colour:
+                  <input type="color" id="grav_colour" value="#868686">
+                  <br>
+                  <label for="lines">Lines: </label>
+                  <input type="checkbox" id="grav_lines" checked>
+                  
+                </div>
+                
+            </div>
+
+            <button id="grav_start" onclick="start()">Start simulation</button>
+            <button id="grav_end" onclick="end()" disabled>End simulation</button>
+            <br>
+            <button id="grav_clear_bodies" onclick="bodies=[]">Clear</button>
+        </main>
+
+        <!-- Load external JavaScript -->
+        <script src="gravity_scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+    </body>
+
+</html>

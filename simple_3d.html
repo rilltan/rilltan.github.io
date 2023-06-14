@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>rilltan</title>
+
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href ="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap">
+
+    </head>
+
+
+    <body>
+        <header>
+            <div id="logo_container">
+                <a href="index.html"><img src="icon.png" id="logo" alt="Logo image"></a>
+            </div>
+
+            <div id="flex_container">
+                <a class="navbar_buttons" href="index.html">HOME</a>
+                <a class="navbar_buttons" href="gravity.html">GRAVITY</a>
+                <a class="navbar_buttons" href="deltarune.html">DELTARUNE</a>
+                <a class="navbar_buttons" href="map_creator.html">MAP CREATOR</a>
+                <a class="navbar_buttons" href="simple_3d.html">SIMPLE 3D</a>
+                <a class="navbar_buttons" href="blender.html">BLENDER</a>
+            </div>
+        </header>
+
+        <main>
+            <h1>Simple 3D</h1>
+            This program looks 3D by drawing vertical lines across the canvas that change height as you move, simulating a 3D environment.
+            <br><br>Controls:
+            <ul>
+                <li>W: forward</li>
+                <li>A: left</li>
+                <li>S: backward</li>
+                <li>D: right</li>
+                <li>Left arrow: turn left</li>
+                <li>Right arrow: turn right</li>
+            </ul>
+
+            <div id="threed_sketch_holder"></div>
+        </main>
+
+        <!-- Load external JavaScript -->
+        <script src="simple_3d_scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+    </body>
+
+</html>
