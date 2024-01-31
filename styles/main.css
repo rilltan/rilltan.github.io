@@ -1,0 +1,48 @@
+
+@font-face {
+    font-family: josefinSans;
+    src: url(/fonts/JosefinSans-VariableFont_wght.ttf);
+}
+html {
+    font-family: josefinSans, sans-serif;
+}
+body {
+    margin: 0;
+}
+header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background-color: rgb(155, 155, 155);
+    padding-right: 5rem;
+    padding-left: 5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+    font-size: 3rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+.logo {
+    border: 5px solid black;
+    border-radius: 10px;
+}
+.header-nav {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    font-size: 2rem;
+}
+.nav-link {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+.nav-link:hover {
+    color: rgb(80, 80, 80);
+}
