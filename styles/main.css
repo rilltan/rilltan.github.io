@@ -12,12 +12,13 @@ body {
 header {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: rgb(155, 155, 155);
     padding-right: 5rem;
     padding-left: 5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    row-gap: 1rem;
 }
 .logo-container {
     display: flex;
@@ -42,7 +43,14 @@ header {
     text-decoration: none;
     color: black;
     transition: 0.3s;
+    text-align: center;
 }
 .nav-link:hover {
     color: rgb(80, 80, 80);
+}
+
+@media only screen and (max-width:600px){
+    body{
+        background-color: lightblue;
+    }
 }
