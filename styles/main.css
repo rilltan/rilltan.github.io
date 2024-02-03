@@ -8,17 +8,24 @@ html {
 }
 body {
     margin: 0;
+    background-image: linear-gradient(to bottom right, rgb(113, 200, 240),rgb(90, 201, 108));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-size: 120%;
 }
 header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    background-color: rgb(155, 155, 155);
+    background-color: rgba(0, 0, 0, 0.24);
     padding-right: 5rem;
     padding-left: 5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     row-gap: 1rem;
+}
+h1{
+    margin-top: 0;
 }
 .logo-container {
     display: flex;
@@ -30,7 +37,7 @@ header {
     color: black;
 }
 .logo {
-    border: 5px solid black;
+    border: 5px solid rgb(54, 54, 54);
     border-radius: 10px;
 }
 .header-nav {
@@ -49,8 +56,21 @@ header {
     color: rgb(80, 80, 80);
 }
 
-@media only screen and (max-width:600px){
-    body{
-        background-color: lightblue;
-    }
+.main-content {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.content-box {
+    border: 5px solid black;
+    background-color: rgb(235, 164, 0);
+    border-radius:15px;
+    padding: 2rem;
+    width: 40rem;
+    transition: 0.2s;
+}
+.content-box:hover{
+    background-color: rgb(255, 166, 0);
 }
