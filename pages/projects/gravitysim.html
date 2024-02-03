@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/gravitysim.css">
+    <script src="/scripts/gravitysim.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!--[header-->
+    <header>
+        <a class="logo-container" href="/index.html">
+            <img class="logo" src="/images/icon.png" height="60" width="60">
+            rilltan
+        </div>
+        <nav class="header-nav">
+            <a class="nav-link" href="/pages/projects.html">projects</a>
+            //
+            <a class="nav-link" href="/pages/blender.html">blender</a>
+            //
+            <a class="nav-link" href="https://github.com/rilltan"><img src="/images/github.svg" style="height:1em;"></a>
+        </nav>
+    </header>
+    <!--]-->
+    <div class="main-content">
+        <div class="content-box">
+            <h1>Gravity Simulator</h1>
+            As part of A-level computer science, we do an extended coursework project over the course of about 9 months.
+            I decided to make a 3D gravity simulator.
+            I used C# as the programming language, and used OpenGL for the 3D graphics.
+            Learning about shaders and transformations and all the things required to make 3D graphics work was really interesting, and something I'd never done before.
+            The UI was created using a graphics library called Dear ImGui, which, once integrated, allowed me to create UI elements extremely easily.
+        </div>
+        <div class="content-box">
+            <h2>Screenshots</h2>
+            <div class="slideshow-container">
+                <img class="slideshow-image" src="/images/gravitysim1.png">
+                <img class="slideshow-image" src="/images/gravitysim2.png">
+                <img class="slideshow-image" src="/images/gravitysim3.png">
+                <img class="slideshow-image" src="/images/gravitysim4.png">
+            </div>
+            <button class="slideshow-button" type="button" onclick="changeslide(0)"></button>
+            <button class="slideshow-button" type="button" onclick="changeslide(1)"></button>
+            <button class="slideshow-button" type="button" onclick="changeslide(2)"></button>
+            <button class="slideshow-button" type="button" onclick="changeslide(3)"></button>
+        </div>
+        <div class="content-box">
+            <h2>Code</h2>
+            <p>
+                You can find all the code for the project on the <a href="https://github.com/rilltan/NEA">GitHub page</a>.
+            </p>
+            <p>
+                To download the program click <a href="">here</a>
+            </p>
+            <p>
+                The program uses the .NET framework, and I have only tested it on Windows, so I am unsure if it will work on other operating systems.
+                It uses .NET 6.0, so you may need to download that if you don't already have it installed (you can find it <a href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime?cid=getdotnetcore&os=windows&arch=x64">here</a>)
+            </p>
+        </div>
+    </div>
+</body>
+</html>

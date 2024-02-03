@@ -1,3 +1,7 @@
 index.html
 pages/blender.html
 pages/projects.html
+pages/projects/adventofcode.html
+pages/projects/deltarune.html
+pages/projects/epicycloids.html
+pages/projects/gravitysim.html

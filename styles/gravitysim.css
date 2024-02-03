@@ -1,0 +1,16 @@
+.slideshow-image {
+    display:none;
+    width: 100%;
+}
+
+.slideshow-button {
+    background-color: white;
+    border: none;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+}
+.slideshow-button:hover {
+    background-color: lightgrey !important;
+    cursor: pointer;
+}

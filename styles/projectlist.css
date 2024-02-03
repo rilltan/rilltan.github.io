@@ -1,0 +1,10 @@
+ul {
+    padding-inline-start: 0;
+    list-style: none inside;
+}
+li {
+    margin-bottom: 0.5rem;
+}
+a {
+    text-decoration: none;
+}
