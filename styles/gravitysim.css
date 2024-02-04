@@ -2,6 +2,9 @@
     display:none;
     width: 100%;
 }
+.slideshow-container {
+    aspect-ratio: 3/2;
+}
 
 .slideshow-button {
     background-color: white;
