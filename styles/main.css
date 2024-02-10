@@ -37,7 +37,7 @@ h1,h2{
     color: black;
 }
 .logo {
-    border: 5px solid rgb(54, 54, 54);
+    border: 5px solid black;
     border-radius: 10px;
 }
 .header-nav {
@@ -77,4 +77,11 @@ h1,h2{
 
 a.nice-link {
     text-decoration: none;
+    transition: 0.3s;
+}
+a.nice-link:link,a.nice-link:visited{
+    color:blue;
+}
+a.nice-link:hover{
+    color:rgb(130, 130, 255);
 }
