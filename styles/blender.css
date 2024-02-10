@@ -1,0 +1,23 @@
+.blender-img {
+    width:100%;
+}
+.blender-vid{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.content-row{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.content-column{
+    width:calc(44rem + 10px);
+}
+.content-box{
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}

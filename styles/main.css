@@ -70,6 +70,7 @@ h1,h2{
     padding: 2rem;
     width: 40rem;
     transition: 0.2s;
+    height: fit-content;
 }
 .content-box:hover{
     background-color: rgb(255, 166, 0);
