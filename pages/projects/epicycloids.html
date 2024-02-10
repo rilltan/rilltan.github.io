@@ -3,6 +3,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/epicycloids.css">
+    <script src="/scripts/p5.min.js"></script>
+    <script src="/scripts/epicycloids.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -23,7 +26,18 @@
     <!--]-->
     <div class="main-content">
         <div class="content-box">
-            Epicycloid animations
+            <h1>Epicycloid Generator</h1>
+            An epicycloid is a type of mathematical curve, formed by tracing a point on a circle that is rolling around another circle.
+            I came across them when doing a group project in my further maths lessons, where we were researching the coin paradox.
+            As part of the slides we were making, I wanted to add some more animations, so I made this generator.
+        </div>
+        <div class="content-box">
+            <h2>Tool</h2>
+            <div class="tool">
+                <div id="sketch-holder"></div>
+                <input type="range" min="4" max="64" step="1" value="64" id="slider-outer-circle">
+                <input type="range" min="4" max="64" step="1" value="64" id="slider-inner-circle">
+            </div>
         </div>
     </div>
 </body>

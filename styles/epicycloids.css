@@ -1,0 +1,10 @@
+#slider-outer-circle, .slider-inner-circle{
+    margin-top: 0.5rem;
+}
+.tool {
+    border: 5px solid gray;
+    border-radius: 10px;
+    display:inline-block;
+    overflow: hidden;
+    background-color: gray;
+}
